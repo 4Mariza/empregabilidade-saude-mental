@@ -1,0 +1,810 @@
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #14b8a6;
+  --accent: #f59e0b;
+
+  --background: #0f172a;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+
+  --card: rgba(255, 255, 255, 0.08);
+
+  --text: #f8fafc;
+  --text-soft: #cbd5e1;
+
+  --border: rgba(255, 255, 255, 0.12);
+
+  --myth: #ef4444;
+  --truth: #10b981;
+
+  --focus: #fde047;
+
+  --radius: 24px;
+
+  --shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  --transition: 0.3s cubic-bezier(.4, 0, .2, 1);
+
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, #1e293b 0%, #0f172a 45%),
+    radial-gradient(circle at bottom right, #172554 0%, #020617 50%);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bg-gradient {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(99,102,241,0.18), transparent 25%),
+    radial-gradient(circle at 80% 30%, rgba(20,184,166,0.15), transparent 25%),
+    radial-gradient(circle at 50% 90%, rgba(245,158,11,0.12), transparent 30%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* HEADER */
+
+header {
+  padding: 4rem 1.5rem 3rem;
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.18);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #c7d2fe;
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(12px);
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+header p {
+  max-width: 680px;
+  margin: 1.5rem auto 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-soft);
+}
+
+header nav {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: .9rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition);
+}
+
+header nav a:hover,
+header nav a:focus {
+  background: rgba(99,102,241,0.22);
+  border-color: rgba(99,102,241,0.35);
+  transform: translateY(-2px);
+}
+
+/* MAIN */
+
+main {
+  width: min(1150px, calc(100% - 2rem));
+  margin: 0 auto 5rem;
+}
+
+.carousel-section,
+.myths-truths-section,
+.qa-section {
+  margin-bottom: 4rem;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+  margin-bottom: 2rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  margin-bottom: .8rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -1px;
+}
+
+/* GLASS CARD BASE */
+
+.carousel-card,
+.myth-truth-card,
+.qa-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+/* CAROUSEL */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  margin-bottom: 1.5rem;
+  outline: none;
+}
+
+.carousel-card {
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  width: min(700px, 100%);
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.carousel-card:hover {
+  transform: translateY(-4px);
+}
+
+.carousel-card h3 {
+  margin-top: 0;
+}
+
+.carousel-card p {
+  color: var(--text-soft);
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carousel-arrow {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.carousel-arrow:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.carousel-arrow:focus {
+  outline: 2px solid var(--focus);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: .7rem;
+}
+
+.carousel-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.carousel-dot.active {
+  width: 28px;
+  background: var(--primary);
+}
+
+/* MYTHS */
+
+.myths-truths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.myth-truth-card {
+  border-radius: var(--radius);
+  min-height: 180px;
+  padding: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  perspective: 1200px;
+  transition: all var(--transition);
+  overflow: hidden;
+}
+
+.myth-truth-card:hover {
+  transform: translateY(-5px);
+}
+
+.myth-truth-card:focus {
+  outline: 2px solid var(--focus);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s;
+  transform-style: preserve-3d;
+}
+
+.myth-truth-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-radius: var(--radius);
+
+  padding: 1.5rem;
+}
+
+.card-front {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+
+.card-back.mito {
+  background:
+    linear-gradient(
+      135deg,
+      #dc2626,
+      #ef4444
+    );
+}
+
+.card-back.verdade {
+  background:
+    linear-gradient(
+      135deg,
+      #059669,
+      #10b981
+    );
+}
+
+/* ACCORDION */
+
+.qa-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.qa-card {
+  border-radius: 22px;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.qa-card:hover {
+  transform: translateY(-2px);
+}
+
+.qa-question {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 1.4rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: left;
+
+  color: var(--text);
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all var(--transition);
+}
+
+.qa-question:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.qa-question:focus {
+  outline: 2px solid var(--focus);
+}
+
+.qa-answer {
+  padding: 0 1.5rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition:
+    max-height .35s ease,
+    padding .35s ease;
+}
+
+.qa-card.open .qa-answer {
+  padding: 0 1.5rem 1.5rem;
+  max-height: 400px;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  header {
+    padding-top: 3rem;
+  }
+
+  header nav {
+    gap: .8rem;
+  }
+
+  header nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .carousel-card {
+    padding: 2rem 1.2rem;
+  }
+
+  .carousel {
+    min-height: 180px;
+  }
+
+  .myth-truth-card {
+    min-height: 160px;
+  }
+
+}
+
+/* =========================
+   RESPONSIVE FIXES
+   ========================= */
+
+/* Evita overflow horizontal */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Melhor renderização em telas pequenas */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Containers principais */
+main,
+.header-content {
+  width: min(1150px, calc(100% - 1.2rem));
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+  padding-inline: 1rem;
+}
+
+header h1 {
+  word-break: break-word;
+}
+
+header p {
+  width: 100%;
+  font-size: clamp(.95rem, 2vw, 1.1rem);
+  padding-inline: .2rem;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav a {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.carousel-section,
+.myths-truths-section,
+.qa-section {
+  width: 100%;
+}
+
+/* =========================
+   CAROUSEL
+   ========================= */
+
+.carousel {
+  width: 100%;
+  min-height: auto;
+}
+
+.carousel-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: clamp(1rem, 4vw, 2.5rem);
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.carousel-card * {
+  overflow-wrap: break-word;
+}
+
+.carousel-controls {
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+
+.carousel-arrow {
+  flex-shrink: 0;
+}
+
+/* =========================
+   MITOS E VERDADES
+   ========================= */
+
+.myths-truths-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.myth-truth-card {
+  width: 100%;
+  min-height: 170px;
+}
+
+.card-front,
+.card-back {
+  padding: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* =========================
+   ACCORDION
+   ========================= */
+
+.qa-card {
+  width: 100%;
+}
+
+.qa-question {
+  gap: 1rem;
+  line-height: 1.5;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.qa-question span,
+.qa-question p,
+.qa-question div {
+  min-width: 0;
+}
+
+/* FIX PRINCIPAL DO TEXTO CORTANDO */
+
+.qa-answer {
+  width: 100%;
+
+  max-height: 0;
+  overflow: hidden;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+
+  line-height: 1.8;
+
+  transition:
+    max-height .45s ease,
+    padding .45s ease;
+}
+
+/* aumenta bastante a altura máxima */
+.qa-card.open .qa-answer {
+  max-height: 1200px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* qualquer conteúdo interno */
+.qa-answer * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* =========================
+   TABLETS
+   ========================= */
+
+@media (max-width: 900px) {
+
+  main {
+    margin-bottom: 4rem;
+  }
+
+  header {
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+  .carousel-card {
+    border-radius: 20px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  :root {
+    --radius: 20px;
+  }
+
+  main,
+  .header-content {
+    width: min(100%, calc(100% - 1rem));
+  }
+
+  header h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header nav a {
+    width: 100%;
+  }
+
+  .carousel {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-card {
+    padding: 1.3rem;
+    border-radius: 18px;
+  }
+
+  .carousel-controls {
+    width: 100%;
+  }
+
+  .carousel-dots {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .myths-truths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .myth-truth-card {
+    min-height: 150px;
+  }
+
+  .qa-question {
+    padding: 1rem;
+    font-size: .98rem;
+    align-items: flex-start;
+  }
+
+  .qa-answer {
+    font-size: .95rem;
+  }
+
+  .qa-card.open .qa-answer {
+    padding: 0 1rem 1rem;
+  }
+
+}
+
+/* =========================
+   CELULARES PEQUENOS
+   ========================= */
+
+@media (max-width: 480px) {
+
+  header {
+    padding-inline: .7rem;
+  }
+
+  main {
+    width: calc(100% - .7rem);
+  }
+
+  .badge {
+    font-size: .75rem;
+    padding: .45rem .8rem;
+  }
+
+  header h1 {
+    letter-spacing: -1px;
+  }
+
+  header p {
+    font-size: .92rem;
+    line-height: 1.6;
+  }
+
+  .section-tag {
+    font-size: .72rem;
+  }
+
+  .carousel-card {
+    padding: 1rem;
+  }
+
+  .carousel-arrow {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .qa-question {
+    font-size: .93rem;
+    padding: .95rem;
+  }
+
+  .qa-answer {
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .card-front,
+  .card-back {
+    font-size: .95rem;
+  }
+
+}
+
+/* =========================
+   TELAS MUITO PEQUENAS
+   ========================= */
+
+@media (max-width: 360px) {
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-controls {
+    gap: .5rem;
+  }
+
+  .carousel-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .carousel-dot.active {
+    width: 20px;
+  }
+
+}
