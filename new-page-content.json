@@ -1,0 +1,55 @@
+{
+  "carousel": [
+    "Você provavelmente vai se sentir perdido no começo — e isso é normal.",
+    "Fazer amigos pode levar mais tempo do que parece.",
+    "Nem todo mundo está confiante, mesmo quando aparenta estar.",
+    "O curso ideal não é perfeito o tempo todo.",
+    "A faculdade ensina muito além das matérias.",
+    "Você pode mudar de ideia sobre carreira, estágio ou objetivos.",
+    "Pedir ajuda não é sinal de fraqueza.",
+    "Muitas pessoas descobrem novas habilidades que nunca imaginaram ter.",
+    "Não saber exatamente o futuro não significa estar atrasado."
+  ],
+  "mythsTruths": [
+    { "statement": "Preciso decidir minha profissão para o resto da vida aos 17 anos.", "type": "Mito" },
+    { "statement": "É comum mudar de curso ou área ao longo da vida.", "type": "Verdade" },
+    { "statement": "Todo mundo entra na faculdade sabendo exatamente o que quer.", "type": "Mito" },
+    { "statement": "Sentir medo e insegurança nessa fase é normal.", "type": "Verdade" },
+    { "statement": "Faculdade garante emprego automaticamente.", "type": "Mito" },
+    { "statement": "Networking e experiências práticas fazem diferença na carreira.", "type": "Verdade" },
+    { "statement": "Só quem passa de primeira no vestibular terá sucesso.", "type": "Mito" },
+    { "statement": "Cada pessoa tem seu próprio tempo de desenvolvimento.", "type": "Verdade" },
+    { "statement": "Trocar de curso significa fracasso.", "type": "Mito" },
+    { "statement": "Muitas pessoas descobrem seus interesses durante a graduação.", "type": "Verdade" },
+    { "statement": "Você precisa amar todas as matérias do curso.", "type": "Mito" },
+    { "statement": "Mesmo profissionais realizados nem sempre gostam de todas as tarefas da área.", "type": "Verdade" },
+    { "statement": "Comparar sua trajetória com a dos outros aumenta a ansiedade.", "type": "Verdade" },
+    { "statement": "Não entrar em uma universidade pública significa que você fracassou.", "type": "Mito" }
+  ],
+  "qa": [
+    {
+      "question": "Qual curso deveria escolher?",
+      "answer": "O melhor curso é aquele que combina seus interesses, habilidades, valores e objetivos de vida. Você não precisa decidir “a profissão da sua vida” agora. Pesquisar grades curriculares, conversar com profissionais e entender a rotina das áreas ajuda muito na escolha"
+    },
+    {
+      "question": "Como ingressar no ensino superior?",
+      "answer": "Existem diferentes formas de entrar no ensino superior no Brasil. As principais são:\n\nENEM: principal porta de entrada para muitas universidades públicas e privadas.\nSisu: usa a nota do ENEM para vagas em universidades públicas.\nProUni: oferece bolsas de estudo em faculdades privadas para estudantes que atendem critérios de renda e desempenho no ENEM.\nFies: financiamento estudantil para cursos em instituições privadas.\nVestibulares tradicionais: provas próprias aplicadas por universidades.\nIngresso direto: algumas faculdades privadas permitem entrada usando a nota do ENEM ou análise do histórico escolar.\n\nPesquisar prazos, editais e requisitos com antecedência ajuda a reduzir a ansiedade e aumenta suas chances de encontrar a melhor oportunidade para você."
+    },
+    {
+      "question": "Como me motivar a pesquisar sobre o ensino superior?",
+      "answer": "Tente enxergar essa pesquisa como uma descoberta sobre você, não como uma obrigação. Conhecer cursos, profissões e universidades pode diminuir a ansiedade e aumentar sua sensação de direção e autonomia."
+    },
+    {
+      "question": "Faculdade garante emprego?",
+      "answer": "Nenhuma faculdade garante emprego automaticamente, mas o ensino superior ainda aumenta as oportunidades profissionais e a renda média no Brasil. Além disso, cursos técnicos, tecnólogos e especializações também podem ser ótimos caminhos."
+    },
+    {
+      "question": "Ainda não sei nada do que quero fazer após o Ensino Médio... Isso é um problema?",
+      "answer": "Não. Muitas pessoas terminam a escola sem certeza sobre carreira ou faculdade. Descobrir interesses leva tempo e experiências diferentes ajudam nesse processo. Você não está “atrasado” por ainda estar em dúvida."
+    },
+    {
+      "question": "Preciso ter certeza absoluta da profissão antes de entrar na faculdade?",
+      "answer": "Não. A faculdade também é um espaço de descoberta. Ter dúvidas nessa fase é normal e esperado. Conversar com profissionais, pesquisar a rotina dos cursos e fazer testes vocacionais pode ajudar a reduzir a ansiedade."
+    }
+  ]
+}
